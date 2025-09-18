@@ -19,7 +19,6 @@
     .group{margin-bottom:22px}
     .social-row{display:flex;flex-wrap:wrap;gap:12px}
     .social-link{flex:1 1 200px;display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;text-decoration:none;color:#fff;font-weight:600;transition:transform .12s ease,box-shadow .12s}
-    .social-link svg{width:20px;height:20px}
     .social-link:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
     /* Colors by type */
     .btn-website{background:var(--market)}
@@ -36,6 +35,33 @@
     .map-actions{display:flex;flex-wrap:wrap;gap:10px;padding:12px;background:#fff}
     .map-btn{flex:1 1 140px;text-align:center;display:inline-block;padding:10px 12px;border-radius:8px;background:var(--link);color:#fff;text-decoration:none;font-weight:700}
     .subscribe-note{font-size:13px;color:var(--muted);margin-top:8px}
+
+    /* Floating Buttons */
+    .floating-buttons{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      z-index:9999;
+    }
+    .floating-buttons a{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:24px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.25);
+      text-decoration:none;
+      transition:transform .15s ease;
+    }
+    .btn-float-wa{background:#25D366}
+    .btn-float-call{background:#0b76ef}
+    .floating-buttons a:hover{transform:scale(1.1)}
   </style>
 </head>
 <body>
@@ -116,6 +142,12 @@
 
       </section>
     </div>
+  </div>
+
+  <!-- Floating WhatsApp & Call Buttons -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/917983624797?text=Hi%20GS5Mini%20pp" class="btn-float-wa" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+    <a href="tel:+917983624797" class="btn-float-call" aria-label="Call Us">📞</a>
   </div>
 </body>
 </html>
